@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  claude-changelog-bot:
+    build: .
+    container_name: claude-changelog-bot
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
